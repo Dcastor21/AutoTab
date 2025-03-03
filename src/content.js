@@ -41,6 +41,21 @@ const getCompletion = async message => {
 class SuggestionWidget{
     constructor(){
         this.el = document.createElement("div");
-        this.el.classList.add("ai-suggestion-widget");
+        this.el.className = "ai-suggestion-widget";
+        this.el.style.cssText =`
+        position: absolute;
+        pointer-events: none;
+        cokor: #9CA3AF;
+        font-family: monospace;
+        white-space: pre;
+        z-index:10000;
+        background: transparent;
+
+        `;
+        document.body.appendChild(this.el);
+
+    }
+    show(element, suggestion, cursorPosition){
+        
     }
 }
